@@ -1,0 +1,16 @@
+html ng-app="app"
+  head
+    title Blog
+    base href="/"
+    = stylesheet_link_tag 'application'
+  body
+    .container
+      .navbar.navbar-default
+        .container-fluid
+          ul.nav.navbar-nav
+            li ui-sref-active="active"
+              a ui-sref="posts_path" All posts
+            li ui-sref-active="active"
+              a ui-sref="new_post_path" New post
+      ui-view
+    = javascript_include_tag 'application'
